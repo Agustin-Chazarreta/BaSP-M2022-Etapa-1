@@ -1,7 +1,9 @@
 # BaSP-M2022-Etapa-1
 
-Cambio de etiqueta nav por un aside.
-Cambiar a tener un h1 solo.
-Eliminacion de espacios en blanco.
-Correccion en la cantidad de caracteres max(114).
-Agregue el header y el footer dentro del body.
+Change of nav label for an aside.
+Switch to having a single h1.
+Elimination of white spaces.
+Correction in the number of characters max(114).
+Add the header and footer inside the body.
+Added <article>, <div> and <form> tag.
+Added support part.
