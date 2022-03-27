@@ -8,3 +8,4 @@ Add the header and footer inside the body.
 Added <article>, <div> and <form> tag.
 Added support part.
 Addres tag added on the contact info.
+<label> tag added on the checkbox section
