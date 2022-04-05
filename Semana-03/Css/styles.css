@@ -172,7 +172,7 @@ form {
   vertical-align: middle;
 }
 .history-section {
-  height: 700px;
+  /* height: 700px; */
   width: 100%;
 }
 .blur-img {
@@ -183,12 +183,12 @@ form {
 span {
   width: 100px;
 }
-#history-article-left {
+/* #history-article-left {
   float: left;
 }
 #history-article-right {
   float: right;
-}
+} */
 footer {
   margin-left: 446px;
   padding: 0 2%;
