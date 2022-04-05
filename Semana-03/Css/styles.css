@@ -18,12 +18,13 @@ header {
   color: #373867;
   font-size: 40px;
   align-items: center;
-  height: 120px;
+  height: 100px;
   position: sticky;
   top: 0;
   width: 100%;
   background-color: white;
   z-index: 100;
+  box-shadow: 5px 5px 8px #888888;
 }
 header h2 {
   float: left;
@@ -31,7 +32,9 @@ header h2 {
 }
 header img {
   float: right;
-  margin-top: 10px;
+  margin-top: 15px;
+  width: 60px;
+  height: 74px;
 }
 #side-bar {
   width: 100%;
@@ -41,6 +44,7 @@ header img {
 #side-bar-header {
   width: 446px;
   height: 106px;
+  margin-top: -20px;
   background: #ebebeb;
 }
 #input-side-bar {
@@ -53,7 +57,7 @@ header img {
 #label-menu {
   text-decoration: underline;
   text-decoration-color: #aace9b;
-  font-size: 64px;
+  font-size: 40px;
   line-height: 75px;
 }
 #side-bar-p {
@@ -62,11 +66,15 @@ header img {
 }
 #side-bar-p p {
   margin: 25px;
+  margin-top: 30px;
 }
 .line-side-bar {
   border: 2px solid #aace9b;
   width: 85%;
   margin: 0 auto;
+}
+.side-bar-contact-info {
+  margin-top: 100px;
 }
 .side-bar-contact-info label {
   font-size: 36px;
@@ -84,13 +92,14 @@ header img {
   margin-left: 10%;
   color: rgb(47, 45, 45);
 }
-.side-bar-contact-info-url {
+.side-bar-contact-dir-url {
   margin-left: 10%;
   font-weight: 500;
   align-items: left;
   text-align: left;
+  border-bottom: 2px solid #aace9b;
 }
-.side-bar-contact-info-url i {
+.side-bar-contact-dir-url i {
   font-size: 20px;
 }
 h1 {
@@ -148,15 +157,23 @@ h2 {
   display: inline-block;
   width: 45%;
 }
-form div {
+form {
   display: inline-block;
   vertical-align: middle;
   margin: 0px 60px 5px 60px;
 }
+.form-contact {
+  height: 200px;
+  display: inline-block;
+  margin-right: 100px;
+}
+.contact-text-area {
+  display: inline-block;
+  vertical-align: middle;
+}
 .history-section {
   height: 700px;
   width: 100%;
-  border-bottom: 2px solid #aace9b;
 }
 .blur-img {
   height: 300px;
@@ -191,9 +208,14 @@ footer {
   font-size: 30px;
 }
 .line-bottom {
+  display: block;
   border-bottom: 3px solid #aace9b;
 }
 #media-icons i {
   font-size: 30px;
   margin: 10px;
+}
+.footer-img {
+  width: 60px;
+  height: 74px;
 }

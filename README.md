@@ -1,15 +1,25 @@
 # BaSP-M2022-Etapa-1
 
-> Change of nav label for an aside.
+## Projects from Radium Roket
 
-Switch to having a single h1.
-Elimination of white spaces.
-Correction in the number of characters max(114).
-Add the header and footer inside the body.
-Added article, div and form tag.
-Added support part.
-Addres tag added on the contact info.
-Label tag added on the checkbox section
-Added ref links to icons
-Added ref links to products-list, company-list and support-list.
-Become a Software Professional 2022
+# Week 1
+
+- Understanding the procces and interactions creating a screenflow using Figma.
+
+#### Url work : https://www.figma.com/file/ABGBeK3yEHzIwRgDvhw6oD/UI-kit-RR-(BaSP)---Julian?node-id=304%3A367
+
+# Week 2
+
+- Create the structure of the landing page in the Figma project.
+
+#### Url work : https://github.com/Agustin-Chazarreta/BaSP-M2022-Etapa-1/tree/main/Semana-02
+
+# Week 3
+
+- Use the web structure created and corrected to be able to apply css to it
+
+#### Url work : https://github.com/Agustin-Chazarreta/BaSP-M2022-Etapa-1/tree/main/Semana-03
+
+## Contact info
+
+Email: alchazarreta0@gmail.com
