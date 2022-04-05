@@ -55,40 +55,18 @@ header img {
   text-decoration-color: #aace9b;
   font-size: 64px;
   line-height: 75px;
-  margin-left: 10%;
 }
-.button-open-sidebar {
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  left: 375px;
-  right: 15px;
-  top: 130px;
-  bottom: 375px;
+#side-bar-p {
+  font-size: 30px;
+  margin: 20px;
 }
-#btns-side-bar {
-  background-color: #d0cdcd;
-  height: 320px;
-  font-size: 36px;
-}
-#btns-side-bar button {
-  width: 200px;
-  height: 100px;
-  font-size: 36px;
-  cursor: pointer;
-  background-color: transparent;
-  border: transparent;
+#side-bar-p p {
+  margin: 25px;
 }
 .line-side-bar {
   border: 2px solid #aace9b;
   width: 85%;
   margin: 0 auto;
-}
-.line-main {
-  border: 2px solid #aace9b;
-  width: 100%;
-  margin: 0 auto;
-  background-color: #aace9b;
 }
 .side-bar-contact-info label {
   font-size: 36px;
@@ -113,8 +91,7 @@ header img {
   text-align: left;
 }
 .side-bar-contact-info-url i {
-  width: 40px;
-  height: 28px;
+  font-size: 20px;
 }
 h1 {
   font-size: 50px;
@@ -129,13 +106,13 @@ h2 {
 #app-info-section {
   display: inline-block;
   padding: 0px;
-  height: 703.86px;
+  height: 550px;
   width: 100%;
 }
 #app-info-section img {
   float: right;
-  width: 556px;
-  height: 577.26px;
+  width: 500px;
+  height: 500px;
   vertical-align: middle;
 }
 #app-info-section p {
@@ -162,7 +139,7 @@ h2 {
 }
 #info-section {
   line-height: 35px;
-  padding: 140px;
+  padding: 100px;
 }
 #info-section h3 {
   font-weight: 700;
@@ -171,22 +148,19 @@ h2 {
   display: inline-block;
   width: 45%;
 }
-form {
-  height: 400px;
-  columns: 2;
-  margin-top: 200px;
-}
 form div {
-  width: 600px;
-  height: 400px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px 60px 5px 60px;
 }
 .history-section {
-  height: 800px;
+  height: 700px;
   width: 100%;
+  border-bottom: 2px solid #aace9b;
 }
 .blur-img {
   height: 300px;
-  margin: 30px;
+  margin: 10px;
   vertical-align: middle;
 }
 span {
@@ -206,13 +180,20 @@ footer {
 }
 .footer-list {
   display: inline-block;
-  width: 30%;
-  align-items: center;
+  width: 10%;
+  padding-left: 150px;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 50px;
+}
+.footer-list h2 {
+  margin-right: 20px;
+  font-size: 30px;
 }
 .line-bottom {
   border-bottom: 3px solid #aace9b;
 }
 #media-icons i {
-  width: 62px;
-  height: 62px;
+  font-size: 30px;
+  margin: 10px;
 }

@@ -1,7 +1,5 @@
 # BaSP-M2022-Etapa-1
 
-## caca
-
 > Change of nav label for an aside.
 
 Switch to having a single h1.
@@ -14,3 +12,4 @@ Addres tag added on the contact info.
 Label tag added on the checkbox section
 Added ref links to icons
 Added ref links to products-list, company-list and support-list.
+Become a Software Professional 2022
