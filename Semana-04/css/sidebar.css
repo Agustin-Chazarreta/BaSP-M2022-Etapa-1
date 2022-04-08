@@ -1,0 +1,74 @@
+aside {
+  width: 446px;
+  height: 100%;
+  position: fixed;
+  top: 120px;
+  left: 0;
+  z-index: 100;
+}
+#label-menu {
+  text-decoration: underline;
+  text-decoration-color: #aace9b;
+  font-size: 40px;
+  line-height: 75px;
+}
+#side-bar {
+  width: 100%;
+  height: 100%;
+  background: #d0cdcd;
+}
+#side-bar-header {
+  width: 446px;
+  height: 106px;
+  margin-top: -20px;
+  background: #ebebeb;
+}
+#input-side-bar {
+  border-radius: 5px;
+  border-color: #d0cdcd;
+  height: 35px;
+  width: 250px;
+  margin: 35px 0px 0px 95px;
+}
+#side-bar-p {
+  font-size: 30px;
+  margin: 20px;
+}
+#side-bar-p p {
+  margin: 25px;
+  margin-top: 30px;
+}
+.line-side-bar {
+  border: 2px solid #aace9b;
+  width: 85%;
+  margin: 0 auto;
+}
+.side-bar-contact-info {
+  margin-top: 100px;
+}
+.side-bar-contact-info label {
+  font-size: 36px;
+  text-align: left;
+  margin-left: 10%;
+}
+.side-bar-contact-info p {
+  width: 390px;
+  height: 140px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: left;
+  margin-top: 10%;
+  margin-left: 10%;
+  color: rgb(47, 45, 45);
+}
+.side-bar-contact-dir-url {
+  margin-left: 10%;
+  font-weight: 500;
+  align-items: left;
+  text-align: left;
+  border-bottom: 2px solid #aace9b;
+}
+.side-bar-contact-dir-url i {
+  font-size: 20px;
+}

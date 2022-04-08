@@ -1,0 +1,108 @@
+main {
+  margin-left: 446px;
+  padding: 0 2%;
+}
+h1 {
+  font-size: 50px;
+  line-height: 58.59px;
+  font-weight: 400;
+}
+h2 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 59px;
+}
+#app-info-section {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  height: 550px;
+  width: 100%;
+}
+#app-info-section img {
+  width: 500px;
+  height: 500px;
+}
+#app-info-section p {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #958888;
+  text-align: left;
+}
+
+.funcionalities-section {
+  width: 40%;
+  color: #373867;
+  font-weight: bold;
+  border: 1px solid #373867;
+  border-radius: 5px;
+  padding: 5px 5px 5px 25px;
+  margin: 15px;
+}
+.func-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #d3d4f0;
+  height: 300px;
+}
+
+#info-section {
+  line-height: 35px;
+  padding: 100px;
+}
+#info-section h3 {
+  font-weight: 700;
+}
+#info-section div {
+  display: inline-block;
+  width: 45%;
+}
+form {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px 60px 5px 60px;
+}
+.form-contact {
+  height: 200px;
+  display: inline-block;
+  margin-right: 100px;
+}
+.contact-text-area {
+  display: inline-block;
+  vertical-align: middle;
+}
+.history-section {
+  width: 100%;
+}
+.blur-img {
+  height: 300px;
+  margin: 10px;
+  vertical-align: middle;
+}
+span {
+  width: 100px;
+}
+@media (max-width: 1024px) {
+  aside {
+    display: none;
+  }
+  main {
+    margin-left: 0px;
+  }
+  #app-info-section {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #app-info-section img {
+    height: 250px;
+    width: 250px;
+  }
+  .funcionalities-section {
+    width: 100%;
+  }
+}
