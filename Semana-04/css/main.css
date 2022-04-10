@@ -33,7 +33,7 @@ h2 {
   text-align: left;
 }
 
-.funcionalities-section {
+.funcionalities-each {
   width: 40%;
   color: #373867;
   font-weight: bold;
@@ -47,19 +47,20 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #d3d4f0;
   height: 300px;
 }
 
 #info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   line-height: 35px;
-  padding: 100px;
 }
 #info-section h3 {
   font-weight: 700;
 }
 #info-section div {
-  display: inline-block;
   width: 45%;
 }
 form {
@@ -78,7 +79,15 @@ form {
 }
 .history-section {
   width: 100%;
+  background-color: rgb(151, 65, 83);
 }
+.history-section div {
+  background-color: chartreuse;
+}
+.history-section span {
+  background-color: chartreuse;
+}
+
 .blur-img {
   height: 300px;
   margin: 10px;
@@ -99,10 +108,17 @@ span {
     justify-content: space-around;
   }
   #app-info-section img {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
   }
-  .funcionalities-section {
+  .funcionalities-each {
     width: 100%;
+  }
+  #info-section div {
+    width: 100%;
+  }
+  #history-first-art {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
