@@ -12,6 +12,7 @@ header {
   z-index: 100;
   box-shadow: 5px 5px 8px #888888;
   position: fixed;
+  top: 0;
 }
 header h2 {
   margin-top: 15px;
