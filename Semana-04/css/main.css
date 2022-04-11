@@ -78,26 +78,40 @@ form {
   vertical-align: middle;
 }
 .history-section {
-  width: 100%;
   background-color: rgb(151, 65, 83);
-}
-.history-section div {
-  background-color: chartreuse;
+  display: inline;
 }
 .history-section span {
-  background-color: chartreuse;
+  width: 50%;
+  align-items: center;
 }
-
+#history-first-article {
+  width: 100%;
+  background-color: chartreuse;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#history-second-article {
+  width: 100%;
+  background-color: rgb(170, 51, 51);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .blur-img {
   height: 300px;
   margin: 10px;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 span {
   width: 100px;
 }
 @media (max-width: 1024px) {
   aside {
+    display: none;
+  }
+  header {
     display: none;
   }
   main {
@@ -112,13 +126,9 @@ span {
     width: 200px;
   }
   .funcionalities-each {
-    width: 100%;
+    width: 50%;
   }
   #info-section div {
     width: 100%;
-  }
-  #history-first-art {
-    display: flex;
-    flex-direction: column-reverse;
   }
 }

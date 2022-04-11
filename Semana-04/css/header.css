@@ -11,6 +11,7 @@ header {
   background-color: white;
   z-index: 100;
   box-shadow: 5px 5px 8px #888888;
+  position: fixed;
 }
 header h2 {
   margin-top: 25px;
@@ -19,4 +20,9 @@ header img {
   margin-top: 15px;
   width: 60px;
   height: 74px;
+}
+@media (max-width: 1024px) {
+  header {
+    display: none;
+  }
 }
