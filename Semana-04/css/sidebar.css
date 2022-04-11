@@ -30,13 +30,13 @@ aside {
   width: 250px;
   margin: 35px 0px 0px 95px;
 }
-#side-bar-p {
+.side-bar-options {
   font-size: 30px;
-  margin: 20px;
-}
-#side-bar-p p {
   margin: 25px;
   margin-top: 30px;
+}
+.side-bar-options p {
+  margin-top: 40px;
 }
 .line-side-bar {
   border: 2px solid #aace9b;
