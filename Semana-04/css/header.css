@@ -14,7 +14,7 @@ header {
   position: fixed;
 }
 header h2 {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 header img {
   margin-top: 15px;
@@ -23,6 +23,6 @@ header img {
 }
 @media (max-width: 1024px) {
   header {
-    display: none;
+    position: absolute;
   }
 }

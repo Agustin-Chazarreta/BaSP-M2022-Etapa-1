@@ -72,3 +72,15 @@ aside {
 .side-bar-contact-dir-url i {
   font-size: 20px;
 }
+.bars-icon {
+  display: none;
+}
+@media (max-width: 1024px) {
+  aside {
+    display: none;
+  }
+  .bars-icon {
+    display: contents;
+    font-size: 40px;
+  }
+}
