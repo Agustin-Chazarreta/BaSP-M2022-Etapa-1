@@ -122,11 +122,11 @@ span {
     height: 200px;
     width: 200px;
   }
+  /* .funcionalities-section {
+    width: 100%;
+  }
   .funcionalities-each {
     width: 50%;
-  }
-  #info-section div {
-    width: 100%;
   }
   form {
     display: flex;
@@ -137,6 +137,10 @@ span {
   form input[type="text"] {
     width: 50%;
   }
+  #info-section div {
+    width: 100%;
+  } */
+
   .contact-text-area-btns {
     width: 50%;
   }
@@ -161,6 +165,27 @@ span {
     width: 100%;
   }
   .text-area {
+    width: 100%;
+  }
+  #app-info-section p {
+    font-size: 20px;
+  }
+  .funcionalities-section {
+    width: 100%;
+  }
+  .funcionalities-each {
+    width: 50%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0px 60px 5px 60px;
+  }
+  form input[type="text"] {
+    width: 50%;
+  }
+  #info-section div {
     width: 100%;
   }
 }
