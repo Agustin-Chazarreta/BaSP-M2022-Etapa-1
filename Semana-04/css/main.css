@@ -17,6 +17,7 @@ form {
   justify-content: center;
   margin: 0px 60px 5px 60px;
 }
+
 span {
   width: 100px;
 }
@@ -45,6 +46,12 @@ span {
   line-height: 35px;
   color: #958888;
   text-align: left;
+}
+.btn-form {
+  width: 130px;
+  height: 40px;
+  align-content: center;
+  margin: 15px;
 }
 
 .funcionalities-each {
