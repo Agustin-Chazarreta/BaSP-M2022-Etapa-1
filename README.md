@@ -20,6 +20,18 @@
 
 #### Url work : https://github.com/Agustin-Chazarreta/BaSP-M2022-Etapa-1/tree/main/Semana-03
 
+# Week 4
+
+- Use css flexbox to make de html responsive
+
+#### Url work : https://github.com/Agustin-Chazarreta/BaSP-M2022-Etapa-1/tree/main/Semana-04
+
+# Week 3
+
+- Learn Javascript
+
+#### Url work : Not yet
+
 ## Contact info
 
 Email: alchazarreta0@gmail.com
