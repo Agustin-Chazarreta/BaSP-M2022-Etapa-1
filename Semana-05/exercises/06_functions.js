@@ -4,7 +4,8 @@ console.log('--EXERCISE 6: FUNCTIONS');
 console.log('-Exercise 6.a:');
 
 function add(a, b) {
-  return console.log('-Exercise 6.a: ' + (a + b));
+  const result = a + b;
+  return console.log('-Exercise 6.a: ' + result);
 }
 add(5, 4);
 

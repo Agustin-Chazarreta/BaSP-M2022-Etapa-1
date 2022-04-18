@@ -16,7 +16,7 @@ if (Math.random() >= 0.5) {
 // “Adulto” entre 31 y 60 años;
 // “Adulto mayor” entre 61 y 75 años;
 // “Anciano” si es mayor a 75 años.
-console.log('-Exercise 4.B:');
+console.log('-Exercise 4.b:');
 
 let age = 30;
 if (age < 0) {
