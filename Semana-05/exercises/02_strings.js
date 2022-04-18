@@ -1,13 +1,16 @@
 console.log('--EXERCISE 2: STRINGS');
+
 // Crear una variable de tipo string con al menos 10 caracteres y convertir todo el texto en mayúscula (utilizar toUpperCase).
 console.log('-Exercise 2.a:');
 let string2A = 'hello hello hello';
 console.log(string2A.toUpperCase());
+
 // Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string con los primeros 5 caracteres guardando el resultado en una nueva variable (utilizar substring).
 console.log('-Exercise 2.b:');
 let string2B = 'Transformation';
 let subString = string2B.substring(0, 5);
 console.log(subString);
+
 // Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string con los últimos 3 caracteres guardando el resultado en una nueva variable (utilizar substring).
 console.log('-Exercise 2.c:');
 let string2C = 'Transformation';

@@ -1,10 +1,12 @@
 console.log('--EXERCISE 1: VARIABLES AND OPERATORS');
+
 //1-A Crear dos variables numéricas y utilizar el operador suma para guardar el valor de la suma de ambos números en una 3er variable.
 console.log('-Exercise 1.a:');
 let a = 6;
 let b = 4;
 let c = a + b;
 console.log(c);
+
 //1-B Crear dos variables de tipo String y concatenarlas guardando el resultado en una 3er variable.
 console.log('-Exercise 1.b:');
 let str1 = 'Hello ';

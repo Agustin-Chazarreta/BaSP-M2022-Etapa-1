@@ -1,42 +1,39 @@
+console.log('--EXERCISE 5: FOR');
+
 // Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de JavaScript para mostrar una alerta utilizando cada una de las palabras.
-function forArray(arr) {
-  for (var i = 0; i < arr.length; i++) {
-    return alert(arr[i]);
-  }
+console.log('-Exercise 5.a:');
+let array5A = ['arrow', 'right', 'left', 'up', 'down'];
+for (let i = 0; i < array5A.length; i++) {
+  alert('-Exercise 5.a: ' + array5A[i]);
 }
-// forArray(['arrow', 'right', 'left', 'up', 'down']);
 
 // Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una alerta por cada palabra modificada.
-function capiArray(arr) {
-  for (var i = 0; i < arr.length; i++) {
-    return alert(
-      arr[i].substring(0, 1).toUpperCase() +
-        arr[i].substring(1, arr[i].length).toLowerCase()
-    );
-  }
+console.log('-Exercise 5.b:');
+let array5B = ['arrow', 'right', 'left', 'up', 'down'];
+for (let i = 0; i < array5B.length; i++) {
+  alert(
+    '-Exercise 5.b: ' +
+      array5B[i].substring(0, 1).toUpperCase() +
+      array5B[i].substring(1, array5B[i].length).toLowerCase()
+  );
 }
-// capiArray(['arrow', 'right', 'left', 'up', 'down']);
 
 // Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto a) recorrerlo con un bucle for para ir
 //  guardando cada palabra dentro de la variable sentence. Al final mostrar una única alerta con la cadena completa.
-function arrToString(arr) {
-  let sentence = '';
-  for (var i = 0; i < arr.length; i++) {
-    sentence += arr[i] + ' ';
-  }
-  return alert(sentence);
+console.log('-Exercise 5.c:');
+let array5C = ['arrow', 'right', 'left', 'up', 'down'];
+let sentence = '';
+for (let i = 0; i < array5C.length; i++) {
+  sentence += array5C[i] + ' ';
 }
-
-// arrToString(['arrow', 'right', 'left', 'up', 'down']);
+alert('-Exercise 5.c: ' + sentence);
 
 // Crear una array vacío y con un bucle for de 10 repeticiones. Llenar el array con el número de la repetición, es decir que al final de la ejecución del
 // bucle for debería haber 10 elementos dentro del array, desde el número 0 hasta al número 9. Mostrar por la consola del navegador el array final (utilizar console.log).
-
-function escalateArray(num) {
-  let newArr = [];
-  for (var i = 0; i < num; i++) {
-    newArr.push(i);
-  }
-  return console.log(newArr);
+console.log('-Exercise 5.d:');
+let array5D = ['arrow', 'right', 'left', 'up', 'down'];
+let newArray5D = [];
+for (let i = 0; i < 10; i++) {
+  newArray5D.push(i);
 }
-escalateArray(10);
+console.log('-Exercise 5.d: ' + newArray5D);
