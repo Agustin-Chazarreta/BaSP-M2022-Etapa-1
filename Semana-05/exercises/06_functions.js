@@ -54,8 +54,17 @@ verifyAddAndInt(6, 4.3);
 // Convertir la validación del ejercicio 6d en una función separada
 // y llamarla dentro de la función suma probando que todo siga funcionando igual.
 console.log('-Exercise 6.e:');
+function validateInt(num1, num2) {
+  if (Number.isInteger(num1) && Number.isInteger(num2)) {
+    return alert('-Exercise 6.e: ' + (num1 + num2));
+  } else
+    return alert(
+      '-Error 6.e: rounded and added, Result = ' +
+        (Math.round(num1) + Math.round(num2))
+    );
+}
 function add2(a, b) {
-  return verifyAddAndInt(a, b);
+  return validateInt(a, b);
 }
 add2(3, 4);
-add2(3.3, 4.7);
+// add2(3.3, 4.7);
