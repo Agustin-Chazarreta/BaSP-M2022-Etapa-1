@@ -30,7 +30,7 @@
 
 - Learn Javascript
 
-#### Url work : Not yet
+#### Url work : https://github.com/Agustin-Chazarreta/BaSP-M2022-Etapa-1/tree/main/Semana-05
 
 ## Contact info
 
