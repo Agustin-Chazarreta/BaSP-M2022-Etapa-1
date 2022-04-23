@@ -23,22 +23,16 @@ function eliminateMsgEmail() {
   errorMsg.style.display = 'none';
 }
 function validatePass(e) {
-  let message = document.getElementById('output-pass');
   let password = e.target.value;
-  let newArr = [];
-  let arr = password.split('');
-  arr.map((e) => {
-    if (isNaN(parseInt(e))) {
-      newArr.push(e);
-      return newArr;
-    } else {
-      newArr.push(parseInt(e));
-      return newArr;
-    }
-  });
-  let isANumber = (element) => typeof element == 'number';
-  let isAString = (element) => typeof element == 'string';
-  if (newArr.some(isANumber) && newArr.some(isAString)) {
+  let message = document.getElementById('output-pass');
+  let stringNumbers = '0123456789';
+  let stringLetters = 'abcdefghijklmnopqrstuvwxyz';
+  let stringLettersAndNumbers = stringNumbers + stringLetters;
+  let arrPass = password.toLowerCase().split('');
+  let includesNumbers = arrPass.some((c) => stringNumbers.includes(c));
+  let includesLetters = arrPass.some((c) => stringLetters.includes(c));
+  let isValidChar = arrPass.every((c) => stringLettersAndNumbers.includes(c));
+  if (includesNumbers && includesLetters && isValidChar) {
     document.getElementById('output-pass').innerHTML = 'Valid Pass';
     message.style.display = 'flex';
     message.style.backgroundColor = '#aace9b';
@@ -47,7 +41,6 @@ function validatePass(e) {
     message.style.display = 'flex';
     message.style.backgroundColor = '#cc5050';
   }
-  return newArr;
 }
 function eliminateMsgPass() {
   let errorMsg = document.getElementById('output-pass');
@@ -58,3 +51,29 @@ inputEmail.addEventListener('blur', checkEmail);
 inputPass.addEventListener('blur', validatePass);
 inputEmail.addEventListener('focus', eliminateMsgEmail);
 inputPass.addEventListener('focus', eliminateMsgPass);
+
+// let message = document.getElementById('output-pass');
+// let password = e.target.value;
+// let newArr = [];
+// let arr = password.split('');
+// arr.map((e) => {
+//   if (isNaN(parseInt(e))) {
+//     newArr.push(e);
+//     return newArr;
+//   } else {
+//     newArr.push(parseInt(e));
+//     return newArr;
+//   }
+// });
+// let isANumber = (element) => typeof element == 'number';
+// let isAString = (element) => typeof element == 'string';
+// if (newArr.some(isANumber) && newArr.some(isAString)) {
+//   document.getElementById('output-pass').innerHTML = 'Valid Pass';
+//   message.style.display = 'flex';
+//   message.style.backgroundColor = '#aace9b';
+// } else {
+//   document.getElementById('output-pass').innerHTML = 'Invalid password';
+//   message.style.display = 'flex';
+//   message.style.backgroundColor = '#cc5050';
+// }
+// return newArr;
