@@ -19,6 +19,10 @@ main {
   justify-content: space-around;
   align-items: center;
 }
+#output-email,
+#output-pass {
+  visibility: hidden;
+}
 .form h2 {
   height: 100px;
   font-family: 'Roboto';
