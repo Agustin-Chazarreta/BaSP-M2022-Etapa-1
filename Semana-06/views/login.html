@@ -7,32 +7,75 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/sidebar.css" />
   </head>
   <body>
-    <div class="login-container">
-      <form class="form">
-        <h2>Log In</h2>
-        <div>
-          <input
-            class="login-input"
-            id="input-email"
-            type="text"
-            placeholder="Email"
-          />
-          <div id="output-email"></div>
+    <header>
+      <h2>Trackgenix</h2>
+      <img
+        src="https://radiumrocket.com/static/rocket-logo-883f208f5b6a41d21540cfecae22fa07.png"
+        alt=""
+      />
+    </header>
+    <aside>
+      <div id="side-bar">
+        <div id="side-bar-header">
+          <input type="text" placeholder="search" id="input-side-bar" />
         </div>
-        <div>
-          <input
-            class="login-input"
-            id="input-pass"
-            type="password"
-            placeholder="Password"
-          />
-          <div id="output-pass"></div>
+        <label id="label-menu">Menu</label>
+        <div class="side-bar-options">
+          <p class="line-bottom"><a href="./index.html">Home</a></p>
+          <p class="line-bottom">
+            <a href="./employee-signup.html">Sign Up</a>
+          </p>
+          <p class="line-bottom"><a href="./login.html">Log In</a></p>
         </div>
-        <button class="login-btn">Register</button>
-      </form>
-    </div>
+        <address>
+          <div class="side-bar-contact-info">
+            <label class="line-bottom">Contact information</label>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              voluptas voluptatem, aperiam.Eum voluptas voluptatem.
+            </p>
+            <div class="side-bar-contact-dir-url" class="line-bottom">
+              <i class="far fa-envelope-open"></i>
+              <a href="information@untitled.tld">information@untitled.tld</a>
+            </div>
+            <div class="side-bar-contact-dir-url" class="line-bottom">
+              <i class="fa fa-home"></i>
+              <span>1234 Somewhere Road #8254 Nashville, TN 00000-0000</span>
+            </div>
+          </div>
+        </address>
+      </div>
+    </aside>
+    <main>
+      <div class="login-container">
+        <form class="form">
+          <h2>Log In</h2>
+          <div class="input">
+            <input
+              class="login-input"
+              id="input-email"
+              type="text"
+              placeholder="Email"
+            />
+            <div id="output-email"></div>
+          </div>
+          <div>
+            <input
+              class="login-input"
+              id="input-pass"
+              type="password"
+              placeholder="Password"
+            />
+            <div id="output-pass"></div>
+          </div>
+          <button class="login-btn">Register</button>
+        </form>
+      </div>
+    </main>
   </body>
   <script src="../javascrips/login.js"></script>
 </html>

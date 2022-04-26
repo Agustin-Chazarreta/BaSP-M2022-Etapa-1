@@ -4,6 +4,12 @@
   background-color: rgba(55, 56, 103, 0.4);
   box-shadow: 0px 0px 4px 5px rgba(55, 56, 103, 0.19);
   border-radius: 30px;
+  margin-top: 130px;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .form {
   width: 100%;
@@ -27,18 +33,32 @@
   text-shadow: 0px 9.45455px 9.45455px rgba(0, 0, 0, 0.25);
 }
 .login-input {
-  background-color: transparent;
-  border: hidden;
-  border-bottom: 1px solid;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  height: 25px;
+  background-color: #afafc2;
+  border: none;
+  border-bottom: 1.5px #000 solid;
+  color: black;
 }
 .login-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #aace9b;
+  color: #ffffff;
   width: 206px;
   height: 29px;
-  background: #aace9b;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
   border-radius: 5px;
-  color: white;
+  box-shadow: 0px 4px 4px #818181;
+  align-self: center;
+}
+@media (min-width: 480px) {
+  main {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    width: 80%;
+    margin-left: 400px;
+  }
 }

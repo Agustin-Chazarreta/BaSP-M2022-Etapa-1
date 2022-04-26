@@ -13,6 +13,9 @@ header {
   position: fixed;
   top: 0;
 }
+.line-bottom {
+  border-bottom: 3px solid #aace9b;
+}
 header h2 {
   margin-top: 15px;
 }

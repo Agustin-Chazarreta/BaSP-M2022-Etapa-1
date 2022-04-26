@@ -7,54 +7,139 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/employee-signup.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/sidebar.css" />
   </head>
   <body>
+    <header>
+      <h2>Trackgenix</h2>
+      <img
+        src="https://radiumrocket.com/static/rocket-logo-883f208f5b6a41d21540cfecae22fa07.png"
+        alt=""
+      />
+    </header>
+    <aside>
+      <div id="side-bar">
+        <div id="side-bar-header">
+          <input type="text" placeholder="search" id="input-side-bar" />
+        </div>
+        <label id="label-menu">Menu</label>
+        <div class="side-bar-options">
+          <p class="line-bottom"><a href="./index.html">Home</a></p>
+          <p class="line-bottom">
+            <a href="./employee-signup.html">Sign Up</a>
+          </p>
+          <p class="line-bottom"><a href="./login.html">Log In</a></p>
+        </div>
+        <address>
+          <div class="side-bar-contact-info">
+            <label class="line-bottom">Contact information</label>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              voluptas voluptatem, aperiam.Eum voluptas voluptatem.
+            </p>
+            <div class="side-bar-contact-dir-url" class="line-bottom">
+              <i class="far fa-envelope-open"></i>
+              <a href="information@untitled.tld">information@untitled.tld</a>
+            </div>
+            <div class="side-bar-contact-dir-url" class="line-bottom">
+              <i class="fa fa-home"></i>
+              <span>1234 Somewhere Road #8254 Nashville, TN 00000-0000</span>
+            </div>
+          </div>
+        </address>
+      </div>
+    </aside>
     <div class="sign-up-container">
-      <h2>Sign Up</h2>
+      <h2 id="title-h2">Sign Up</h2>
       <form class="form">
         <div class="input-container">
           <div class="column">
-            <input class="input-form" id="input-name" placeholder="Name" />
-            <input
-              class="input-form"
-              id="input-last-name"
-              placeholder="LastName"
-            />
-            <input class="input-form" id="input-dni" placeholder="Dni" />
-            <input class="input-form" id="input-birth" placeholder="Birth" />
-            <input
-              class="input-form"
-              id="input-telephone"
-              placeholder="Cellphone"
-            />
-            <input
-              class="input-form"
-              id="input-address"
-              placeholder="Address"
-            />
+            <div class="input-and-msg">
+              <input class="input-form" id="input-name" placeholder="Name" />
+              <div class="message" id="output-name">Output text</div>
+            </div>
+            <div class="input-and-msg">
+              <input
+                class="input-form"
+                id="input-last-name"
+                placeholder="LastName"
+              />
+              <div class="message" id="output-last-name">Output text</div>
+            </div>
+            <div class="input-and-msg">
+              <input class="input-form" id="input-dni" placeholder="Dni" />
+              <div class="message" id="output-dni">Output text</div>
+            </div>
+            <div class="input-and-msg">
+              <input
+                class="input-form"
+                id="input-date"
+                placeholder="Birth"
+                type="date"
+              />
+              <div class="message" id="output-date">Output text</div>
+            </div>
+            <div class="input-and-msg">
+              <input
+                class="input-form"
+                id="input-telephone"
+                placeholder="Cellphone"
+              />
+              <div class="message" id="output-telephone">Output text</div>
+            </div>
+            <div class="input-and-msg">
+              <input
+                class="input-form"
+                id="input-address"
+                placeholder="Address"
+              />
+              <div class="message" id="output-address">Output text</div>
+            </div>
           </div>
           <div class="column">
-            <input
-              class="input-form"
-              id="input-localidad"
-              placeholder="Localidad"
-            />
-            <input class="input-form" id="input-postal" placeholder="Postal" />
-            <input class="input-form" id="input-email" placeholder="Email" />
-            <input
-              class="input-form"
-              id="input-password"
-              placeholder="Password"
-            />
-            <input
-              class="input-form"
-              id="input-password2"
-              placeholder="Repeat Password"
-            />
+            <div class="input-and-msg">
+              <input
+                class="input-form"
+                id="input-localidad"
+                placeholder="Localidad"
+              />
+              <div class="message" id="output-localidad">Output text</div>
+            </div>
+            <div class="input-and-msg">
+              <input
+                class="input-form"
+                id="input-postal"
+                placeholder="Postal"
+              />
+              <div class="message" id="output-postal">Output text</div>
+            </div>
+            <div class="input-and-msg">
+              <input class="input-form" id="input-email" placeholder="Email" />
+              <div class="message" id="output-email">Output text</div>
+            </div>
+            <div class="input-and-msg">
+              <input
+                class="input-form"
+                id="input-password"
+                placeholder="Password"
+              />
+              <div class="message" id="output-password">Output text</div>
+            </div>
+            <div class="input-and-msg">
+              <input
+                class="input-form"
+                id="input-password2"
+                placeholder="Repeat Password"
+              />
+              <div class="message" id="output-password2">Output text</div>
+            </div>
           </div>
         </div>
       </form>
-      <button class="sign-up-btn">Register</button>
+      <div id="btn-container">
+        <button class="sign-up-btn">Register</button>
+      </div>
     </div>
   </body>
   <script src="../javascrips/employee-signup.js"></script>
