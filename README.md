@@ -26,11 +26,17 @@
 
 #### Url work : https://github.com/Agustin-Chazarreta/BaSP-M2022-Etapa-1/tree/main/Semana-04
 
-# Week 3
+# Week 5
 
 - Learn Javascript
 
 #### Url work : https://github.com/Agustin-Chazarreta/BaSP-M2022-Etapa-1/tree/main/Semana-05
+
+# Week 6
+
+- Apply javascript with dom manipulation and create validations for inputs +CSS
+
+#### Url work : https://github.com/Agustin-Chazarreta/BaSP-M2022-Etapa-1/tree/main/Semana-06
 
 ## Contact info
 

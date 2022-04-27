@@ -80,6 +80,11 @@ span {
 #info-section h3 {
   font-weight: 700;
 }
+#output-email,
+#output-name,
+#output-text-area {
+  visibility: hidden;
+}
 #info-section div {
   width: 45%;
 }

@@ -115,8 +115,10 @@
       <section class="line-bottom">
         <form>
           <div class="form-contact">
-            <input type="text" placeholder="Name" class="input" />
-            <input type="text" placeholder="Email" class="input" />
+            <input type="text" placeholder="Name" class="input" id="input-name" />
+            <div id="output-name">Output Message</div>
+            <input type="text" placeholder="Email" class="input" id="input-email"/>
+            <div id="output-email">Output Message</div>
             <h4>Contact area:</h4>
             <div>
               <input type="checkbox" />
@@ -133,9 +135,10 @@
           </div>
           <div>
             <h4>Message</h4>
-            <textarea rows="12" cols="40" placeholder="Message" class="text-area"></textarea>
+            <textarea rows="12" cols="40" placeholder="Message" class="text-area" id="text-area-msg"></textarea>
+            <div id="output-text-area">Output Message</div>
             <div class="contact-text-area-btns">
-              <button class="btn-form">Send</button>
+              <button class="btn-form" id="btn-send">Send</button>
               <button class="btn-form">Return</button>
             </div>
           </div>
@@ -210,4 +213,5 @@
     </footer>
   </div>
 </body>
+<script src="../javascrips/contact.js"></script>
 </html>

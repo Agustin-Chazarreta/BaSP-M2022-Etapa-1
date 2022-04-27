@@ -164,14 +164,13 @@ function validateTelephone(e) {
     outputEditNotOk('output-telephone', 'invalid Telephone');
   }
 }
+//Fecha de Nacimiento: Con formato dd/mm/aaaa.
 function getAge(dateString) {
   var today = new Date();
   var birthDate = new Date(dateString);
   var age = today.getFullYear() - birthDate.getFullYear();
   return age;
 }
-
-//Fecha de Nacimiento: Con formato dd/mm/aaaa.
 function validateDate(e) {
   let age = e.target.value;
   if (getAge(age) >= 18 && getAge(age) <= 101) {
