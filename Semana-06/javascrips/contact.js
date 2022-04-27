@@ -1,3 +1,4 @@
+//Variables and DOM
 let inputName = document.getElementById('input-name');
 let inputEmail = document.getElementById('input-email');
 let btnSend = document.getElementById('btn-send');
@@ -20,6 +21,7 @@ let values = [
     errorType: 'Error: Text area must contain more than 3 character \n',
   },
 ];
+//Reusable functions
 function includesLetters(arr) {
   return arr.some((c) => stringLetters.includes(c));
 }
@@ -29,13 +31,11 @@ function onlyLetter(arr) {
 function onlyLetNumSpace(arr) {
   return arr.every((c) => stringNumAndLetAndSpace.includes(c));
 }
-function includesNumber(arr) {
-  return arr.some((c) => stringNumbers.includes(c));
-}
 function includesNumberAndLetter(arr) {
   return arr.some((c) => stringNumbersAndLetters.includes(c));
 }
 //Validations
+//Email validation.
 function validateEmail(e) {
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value)) {
     return true;
@@ -61,6 +61,7 @@ function eliminateMsgEmail() {
   let errorMsg = document.getElementById('output-email');
   errorMsg.style.visibility = 'hidden';
 }
+
 //Nombre: Solo letras y debe tener más de 3 letras.
 function validateName(e) {
   let message = document.getElementById('output-name');
@@ -82,6 +83,8 @@ function eliminateMsgName() {
   let errorMsg = document.getElementById('output-name');
   errorMsg.style.visibility = 'hidden';
 }
+
+//Text area: Alfanumerico tener más de 3 letras.
 function validateTextArea(e) {
   let message = document.getElementById('output-text-area');
   let textAreaMsg = e.target.value;
@@ -106,14 +109,15 @@ function eliminateMsgName() {
   let errorMsg = document.getElementById('output-text-area');
   errorMsg.style.visibility = 'hidden';
 }
-textArea.value;
-
+//Events
 inputEmail.addEventListener('blur', checkEmail);
 inputName.addEventListener('blur', validateName);
 inputEmail.addEventListener('focus', eliminateMsgEmail);
 inputName.addEventListener('focus', eliminateMsgName);
 textArea.addEventListener('blur', validateTextArea);
 textArea.addEventListener('focus', eliminateMsgName);
+
+//Button event
 btnSend.addEventListener('click', function alerta(e) {
   e.preventDefault();
   let arr = [];

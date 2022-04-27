@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://kit.fontawesome.com/a673e73a95.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Employee Sign Up</title>
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/employee-signup.css" />
     <link rel="stylesheet" href="../styles/header.css" />
@@ -50,97 +54,104 @@
         </address>
       </div>
     </aside>
-    <div class="sign-up-container">
-      <h2 id="title-h2">Sign Up</h2>
-      <form class="form">
-        <div class="input-container">
-          <div class="column">
-            <div class="input-and-msg">
-              <input class="input-form" id="input-name" placeholder="Name" />
-              <div class="message" id="output-name">Output text</div>
+    <main>
+      <div class="bars-icon"><i class="fas fa-bars"></i></div>
+      <div class="sign-up-container">
+        <h2 id="title-h2">Sign Up</h2>
+        <form class="form">
+          <div class="input-container">
+            <div class="column">
+              <div class="input-and-msg">
+                <input class="input-form" id="input-name" placeholder="Name" />
+                <div class="message" id="output-name">Output text</div>
+              </div>
+              <div class="input-and-msg">
+                <input
+                  class="input-form"
+                  id="input-last-name"
+                  placeholder="LastName"
+                />
+                <div class="message" id="output-last-name">Output text</div>
+              </div>
+              <div class="input-and-msg">
+                <input class="input-form" id="input-dni" placeholder="Dni" />
+                <div class="message" id="output-dni">Output text</div>
+              </div>
+              <div class="input-and-msg">
+                <input
+                  class="input-form"
+                  id="input-date"
+                  placeholder="Birth"
+                  type="date"
+                />
+                <div class="message" id="output-date">Output text</div>
+              </div>
+              <div class="input-and-msg">
+                <input
+                  class="input-form"
+                  id="input-telephone"
+                  placeholder="Cellphone"
+                />
+                <div class="message" id="output-telephone">Output text</div>
+              </div>
+              <div class="input-and-msg">
+                <input
+                  class="input-form"
+                  id="input-address"
+                  placeholder="Address"
+                />
+                <div class="message" id="output-address">Output text</div>
+              </div>
             </div>
-            <div class="input-and-msg">
-              <input
-                class="input-form"
-                id="input-last-name"
-                placeholder="LastName"
-              />
-              <div class="message" id="output-last-name">Output text</div>
-            </div>
-            <div class="input-and-msg">
-              <input class="input-form" id="input-dni" placeholder="Dni" />
-              <div class="message" id="output-dni">Output text</div>
-            </div>
-            <div class="input-and-msg">
-              <input
-                class="input-form"
-                id="input-date"
-                placeholder="Birth"
-                type="date"
-              />
-              <div class="message" id="output-date">Output text</div>
-            </div>
-            <div class="input-and-msg">
-              <input
-                class="input-form"
-                id="input-telephone"
-                placeholder="Cellphone"
-              />
-              <div class="message" id="output-telephone">Output text</div>
-            </div>
-            <div class="input-and-msg">
-              <input
-                class="input-form"
-                id="input-address"
-                placeholder="Address"
-              />
-              <div class="message" id="output-address">Output text</div>
+            <div class="column">
+              <div class="input-and-msg">
+                <input
+                  class="input-form"
+                  id="input-localidad"
+                  placeholder="Localidad"
+                />
+                <div class="message" id="output-localidad">Output text</div>
+              </div>
+              <div class="input-and-msg">
+                <input
+                  class="input-form"
+                  id="input-postal"
+                  placeholder="Postal"
+                />
+                <div class="message" id="output-postal">Output text</div>
+              </div>
+              <div class="input-and-msg">
+                <input
+                  class="input-form"
+                  id="input-email"
+                  placeholder="Email"
+                />
+                <div class="message" id="output-email">Output text</div>
+              </div>
+              <div class="input-and-msg">
+                <input
+                  class="input-form"
+                  id="input-password"
+                  placeholder="Password"
+                />
+                <div class="message" id="output-password">Output text</div>
+              </div>
+              <div class="input-and-msg">
+                <input
+                  class="input-form"
+                  id="input-password2"
+                  placeholder="Repeat Password"
+                />
+                <div class="message" id="output-password2">Output text</div>
+              </div>
             </div>
           </div>
-          <div class="column">
-            <div class="input-and-msg">
-              <input
-                class="input-form"
-                id="input-localidad"
-                placeholder="Localidad"
-              />
-              <div class="message" id="output-localidad">Output text</div>
-            </div>
-            <div class="input-and-msg">
-              <input
-                class="input-form"
-                id="input-postal"
-                placeholder="Postal"
-              />
-              <div class="message" id="output-postal">Output text</div>
-            </div>
-            <div class="input-and-msg">
-              <input class="input-form" id="input-email" placeholder="Email" />
-              <div class="message" id="output-email">Output text</div>
-            </div>
-            <div class="input-and-msg">
-              <input
-                class="input-form"
-                id="input-password"
-                placeholder="Password"
-              />
-              <div class="message" id="output-password">Output text</div>
-            </div>
-            <div class="input-and-msg">
-              <input
-                class="input-form"
-                id="input-password2"
-                placeholder="Repeat Password"
-              />
-              <div class="message" id="output-password2">Output text</div>
-            </div>
-          </div>
+        </form>
+        <div id="btn-container">
+          <button id="btn" class="sign-up-btn">Register</button>
         </div>
-      </form>
-      <div id="btn-container">
-        <button id="btn" class="sign-up-btn">Register</button>
       </div>
-    </div>
+    </main>
   </body>
   <script src="../javascrips/employee-signup.js"></script>
 </html>

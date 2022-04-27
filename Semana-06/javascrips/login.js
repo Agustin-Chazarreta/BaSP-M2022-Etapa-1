@@ -1,3 +1,4 @@
+//Variables and DOM
 let inputEmail = document.getElementById('input-email');
 let inputPass = document.getElementById('input-pass');
 let btn = document.getElementById('login-btn');

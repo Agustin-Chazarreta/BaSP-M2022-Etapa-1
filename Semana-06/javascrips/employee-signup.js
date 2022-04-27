@@ -1,3 +1,4 @@
+//Variables and DOM
 let stringLetters = 'abcdefghijklmnopqrstuvwxyz';
 let stringNumbers = '0123456789';
 let stringNumbersAndLetters = stringLetters + stringNumbers;
@@ -164,6 +165,7 @@ function validateTelephone(e) {
     outputEditNotOk('output-telephone', 'invalid Telephone');
   }
 }
+
 //Fecha de Nacimiento: Con formato dd/mm/aaaa.
 function getAge(dateString) {
   var today = new Date();
@@ -283,6 +285,8 @@ function corroboratePass(e) {
     outputEditNotOk('output-password2', 'invalid Password');
   }
 }
+
+//Events
 inputName.addEventListener('blur', validateName);
 inputName.addEventListener('focus', eliminateFocus);
 inputLastName.addEventListener('blur', validateLastName);
@@ -305,6 +309,8 @@ inputPassword.addEventListener('blur', validatePass);
 inputPassword.addEventListener('focus', eliminateFocus);
 inputPassword2.addEventListener('blur', corroboratePass);
 inputPassword2.addEventListener('focus', eliminateFocus);
+
+//Button event
 btn.addEventListener('click', function checkAll(e) {
   e.preventDefault();
   let arr = [];
