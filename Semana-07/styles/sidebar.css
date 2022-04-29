@@ -1,0 +1,87 @@
+aside {
+  width: 400px;
+  height: 100%;
+  position: fixed;
+  top: 120px;
+  left: 0;
+}
+#label-menu {
+  text-decoration: underline;
+  font-size: 40px;
+  line-height: 75px;
+  text-decoration-color: #aace9b;
+}
+#side-bar {
+  width: 100%;
+  height: 100%;
+  background: #d0cdcd;
+}
+#side-bar-header {
+  width: 400px;
+  height: 106px;
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ebebeb;
+}
+#input-side-bar {
+  border-radius: 5px;
+  height: 35px;
+  width: 250px;
+  border-color: #d0cdcd;
+}
+.side-bar-options {
+  font-size: 30px;
+  margin: 25px;
+  margin-top: 30px;
+}
+.side-bar-options p {
+  margin-top: 40px;
+}
+.line-side-bar {
+  border: 2px solid #aace9b;
+  width: 85%;
+  margin: 0 auto;
+}
+.side-bar-contact-info {
+  margin-top: 100px;
+}
+.side-bar-contact-info label {
+  font-size: 36px;
+  text-align: left;
+  margin-left: 10%;
+}
+.side-bar-contact-info p {
+  width: 390px;
+  height: 140px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: left;
+  margin-top: 10%;
+  margin-left: 10%;
+  color: rgb(47, 45, 45);
+}
+.side-bar-contact-dir-url {
+  margin-left: 10%;
+  font-weight: 500;
+  align-items: left;
+  text-align: left;
+  border-bottom: 2px solid #aace9b;
+}
+.side-bar-contact-dir-url i {
+  font-size: 20px;
+}
+.bars-icon {
+  display: none;
+}
+@media (max-width: 1024px) {
+  aside {
+    display: none;
+  }
+  .bars-icon {
+    display: contents;
+    font-size: 40px;
+  }
+}

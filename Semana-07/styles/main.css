@@ -1,0 +1,192 @@
+main {
+  margin-left: 400px;
+  padding: 0 2%;
+}
+h1 {
+  font-size: 45px;
+  line-height: 58.59px;
+  font-weight: 400;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 59px;
+}
+form {
+  display: flex;
+  justify-content: center;
+  margin: 0px 60px 5px 60px;
+}
+
+span {
+  width: 100px;
+}
+.line-bottom {
+  border-bottom: 3px solid #aace9b;
+}
+.top {
+  padding-top: 100px;
+}
+#app-info-section {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  height: 550px;
+  width: 100%;
+}
+#app-info-section img {
+  width: 500px;
+  height: 500px;
+}
+#app-info-section p {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: left;
+  color: #958888;
+}
+.btn-form {
+  width: 130px;
+  height: 40px;
+  align-content: center;
+  margin: 15px;
+}
+
+.funcionalities-each {
+  width: 30%;
+  font-weight: bold;
+  border: 1px solid #373867;
+  border-radius: 5px;
+  padding: 5px 5px 5px 25px;
+  margin: 15px;
+  color: #373867;
+}
+.func-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 300px;
+}
+#info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 35px;
+}
+#info-section h3 {
+  font-weight: 700;
+}
+#output-email,
+#output-name,
+#output-text-area {
+  visibility: hidden;
+}
+#info-section div {
+  width: 45%;
+}
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  margin-right: 100px;
+}
+.contact-text-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+.contact-text-area-btns {
+  display: flex;
+  justify-content: space-around;
+}
+.history-section {
+  display: flex;
+  flex-direction: column;
+}
+.history-section span {
+  width: 50%;
+  align-items: center;
+}
+.history-section-article {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.blur-img {
+  height: 300px;
+  margin: 10px;
+}
+@media (max-width: 1024px) {
+  main {
+    margin-left: 0px;
+  }
+
+  #app-info-section img {
+    height: 300px;
+    width: 300px;
+  }
+  .contact-text-area-btns {
+    width: 50%;
+  }
+  .form-contact {
+    align-items: left;
+  }
+  .blur-img {
+    height: 30%;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 38px;
+    line-height: 58.59px;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 59px;
+  }
+  #app-info-section {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .history-section-article {
+    flex-direction: column;
+    width: 100%;
+  }
+  .history-section :nth-child(1) {
+    flex-direction: column-reverse;
+  }
+  .history-section span {
+    width: 100%;
+  }
+  .text-area {
+    width: 80%;
+  }
+  #app-info-section p {
+    font-size: 20px;
+  }
+  .funcionalities-section {
+    width: 100%;
+  }
+  .funcionalities-each {
+    width: 50%;
+  }
+  form {
+    flex-direction: column;
+    align-items: left;
+    margin: 0px 60px 5px 60px;
+  }
+  form input[type='text'] {
+    width: 120px;
+  }
+  #info-section div {
+    width: 100%;
+  }
+}
