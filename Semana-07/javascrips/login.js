@@ -1,16 +1,27 @@
-//fetchs
-const URL_LOGIN = `https://basp-m2022-api-rest-server.herokuapp.com/login`;
-fetch(URL_LOGIN)
-  .then((response) => response.json())
-  .then((data) => console.log(data.errors))
-  .catch((e) => {
-    console.log(e);
-  });
-
 //Variables and DOM
 let inputEmail = document.getElementById('input-email');
 let inputPass = document.getElementById('input-pass');
 let btn = document.getElementById('login-btn');
+//fetchs
+// var userInfo = {
+//   email: inputEmail.value,
+//   password: inputPass.value,
+// };
+// const URL_LOGIN = `https://basp-m2022-api-rest-server.herokuapp.com/login`;
+// fetch(URL_LOGIN),
+//   {
+//     method: 'POST',
+//     body: JSON.stringify(userInfo),
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   }
+
+//     .then((response) => response.json())
+//     .then((data) => console.log(data.errors))
+//     .catch((e) => {
+//       console.log(e);
+//     });
 
 let values = [
   {
@@ -81,20 +92,49 @@ inputEmail.addEventListener('blur', checkEmail);
 inputPass.addEventListener('blur', validatePass);
 inputEmail.addEventListener('focus', eliminateMsgEmail);
 inputPass.addEventListener('focus', eliminateMsgPass);
-btn.addEventListener('click', function alerta(e) {
+btn.addEventListener('click', function logIn(e) {
   e.preventDefault();
-  let arr = [];
-  let errArr = [];
-  for (let i = 0; i < values.length; i++) {
-    if (values[i].boolean) {
-      arr.push(values[i].boolean);
-    } else {
-      errArr.push(values[i].errorType);
-    }
-  }
-  if (arr.length === 2) {
-    alert(
-      'Email : ' + inputEmail.value + '\n' + 'Password : ' + inputPass.value
-    );
-  } else alert(errArr);
+  var userInfo = {
+    email: inputEmail.value,
+    password: inputPass.value,
+  };
+  let query = Object.keys(userInfo)
+    .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(userInfo[k]))
+    .join('&');
+  const URL_LOGIN =
+    `https://basp-m2022-api-rest-server.herokuapp.com/login?` + query;
+  fetch(URL_LOGIN, {
+    method: 'POST',
+    body: JSON.stringify(userInfo),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(function (response) {
+      return response.text();
+    })
+    .then(function (text) {
+      console.log(text);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 });
+
+// function alerta(e) {
+//   e.preventDefault();
+//   let arr = [];
+//   let errArr = [];
+//   for (let i = 0; i < values.length; i++) {
+//     if (values[i].boolean) {
+//       arr.push(values[i].boolean);
+//     } else {
+//       errArr.push(values[i].errorType);
+//     }
+//   }
+//   if (arr.length === 2) {
+//     alert(
+//       'Email : ' + inputEmail.value + '\n' + 'Password : ' + inputPass.value
+//     );
+//   } else alert(errArr);
+// }
