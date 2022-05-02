@@ -88,17 +88,19 @@ btn.addEventListener('click', function logIn(e) {
       `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${inputEmail.value}&password=${inputPass.value}`
     )
       .then((response) => response.json())
-      .then((data) =>
-        alert(
-          'Email : ' +
-            inputEmail.value +
-            '\n' +
-            'Password : ' +
-            inputPass.value +
-            '\n' +
-            data.msg
-        )
-      )
+      .then((data) => {
+        if (data.success) {
+          alert(
+            'Email : ' +
+              inputEmail.value +
+              '\n' +
+              'Password : ' +
+              inputPass.value +
+              '\n' +
+              data.msg
+          );
+        } else return alert(data.msg);
+      })
       .catch((error) => {
         alert(error);
       });

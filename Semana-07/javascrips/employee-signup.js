@@ -278,7 +278,7 @@ function corroboratePass(e) {
   let pass2 = e.target.value;
   if (pass1 === pass2 && pass1.length > 1) {
     values[10].boolean = true;
-    pass = [];
+    pass = '';
     outputEditOk('output-password2', 'valid Password');
   } else {
     values[10].boolean = false;
@@ -323,39 +323,51 @@ btn.addEventListener('click', function checkAll(e) {
     }
   }
   if (arr.length === 11) {
-    alert(
-      'Name: ' +
-        inputName.value +
-        '\n' +
-        'Last Name: ' +
-        inputLastName.value +
-        '\n' +
-        'Dni : ' +
-        inputDni.value +
-        '\n' +
-        'Date : ' +
-        inputDate.value +
-        '\n' +
-        'Telephone: ' +
-        inputTelephone.value +
-        '\n' +
-        'Address: ' +
-        inputAddress.value +
-        '\n' +
-        'Locality : ' +
-        inputLocalidad.value +
-        '\n' +
-        'Postal : ' +
-        inputPostal.value +
-        '\n' +
-        'Email : ' +
-        inputEmail.value +
-        '\n' +
-        'Password : ' +
-        inputPassword.value +
-        '\n' +
-        'Repeated Password : ' +
-        inputPassword2.value
-    );
+    //https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birth.value}&phone=${tel.value}&address=${adress.value}&city=${city.value}&zip=${postalCode.value}&email=${email.value}&password=${password.value})
+    fetch(
+      `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${inputName.value}&lastName=${inputLastName.value}&dni=${inputDni.value}&dob=${inputDate.value}&phone=${inputTelephone.value}&address=${inputAddress.value}&city=${inputLocalidad.value}&zip=${inputPostal.value}&email=${inputEmail.value}&password=${inputPassword.value}`
+    )
+      .then((response) => response.json())
+      .then((data) =>
+        alert(
+          'Name: ' +
+            inputName.value +
+            '\n' +
+            'Last Name: ' +
+            inputLastName.value +
+            '\n' +
+            'Dni : ' +
+            inputDni.value +
+            '\n' +
+            'Date : ' +
+            inputDate.value +
+            '\n' +
+            'Telephone: ' +
+            inputTelephone.value +
+            '\n' +
+            'Address: ' +
+            inputAddress.value +
+            '\n' +
+            'Locality : ' +
+            inputLocalidad.value +
+            '\n' +
+            'Postal : ' +
+            inputPostal.value +
+            '\n' +
+            'Email : ' +
+            inputEmail.value +
+            '\n' +
+            'Password : ' +
+            inputPassword.value +
+            '\n' +
+            'Repeated Password : ' +
+            inputPassword2.value +
+            '\n' +
+            data
+        )
+      )
+      .catch((error) => {
+        alert(error);
+      });
   } else alert(errArr);
 });
