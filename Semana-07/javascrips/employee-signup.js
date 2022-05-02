@@ -109,7 +109,19 @@ function eliminateFocus(e) {
   message.style.visibility = 'hidden';
 }
 //Validations
-
+//save data on local storage
+function saveDataLocal() {
+  localStorage.setItem('name', inputName.value);
+  localStorage.setItem('lastName', inputLastName.value);
+  localStorage.setItem('dob', inputDate.value);
+  localStorage.setItem('dni', inputDni.value);
+  localStorage.setItem('phone', inputTelephone.value);
+  localStorage.setItem('address', inputAddress.value);
+  localStorage.setItem('city', inputLocalidad.value);
+  localStorage.setItem('zip', inputPostal.value);
+  localStorage.setItem('email', inputEmail.value);
+  localStorage.setItem('password', inputPassword.value);
+}
 //Nombre: Solo letras y debe tener más de 3 letras.
 function validateName(e) {
   let name = e.target.value;
@@ -144,7 +156,12 @@ function validateLastName(e) {
 function validateDni(e) {
   let dni = e.target.value;
   let arrDni = dni.toLowerCase().split('');
-  if (onlyNumber(arrDni) && includesNumber(arrDni) && arrDni.length >= 7) {
+  if (
+    onlyNumber(arrDni) &&
+    includesNumber(arrDni) &&
+    arrDni.length >= 7 &&
+    arrDni.length <= 8
+  ) {
     outputEditOk('output-dni', 'valid DNI');
     values[2].boolean = true;
   } else {
@@ -167,6 +184,7 @@ function validateTelephone(e) {
 }
 
 //Fecha de Nacimiento: Con formato dd/mm/aaaa.
+newFormat = '';
 function getAge(dateString) {
   var today = new Date();
   var birthDate = new Date(dateString);
@@ -175,7 +193,14 @@ function getAge(dateString) {
 }
 function validateDate(e) {
   let age = e.target.value;
+  var formatDate = age.split('-');
   if (getAge(age) >= 18 && getAge(age) <= 101) {
+    newFormat =
+      formatDate.slice(1, 2) +
+      '/' +
+      formatDate.slice(2) +
+      '/' +
+      formatDate.slice(0, 1);
     values[4].boolean = true;
     outputEditOk('output-date', 'valid Date');
   } else {
@@ -325,49 +350,59 @@ btn.addEventListener('click', function checkAll(e) {
   if (arr.length === 11) {
     //https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birth.value}&phone=${tel.value}&address=${adress.value}&city=${city.value}&zip=${postalCode.value}&email=${email.value}&password=${password.value})
     fetch(
-      `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${inputName.value}&lastName=${inputLastName.value}&dni=${inputDni.value}&dob=${inputDate.value}&phone=${inputTelephone.value}&address=${inputAddress.value}&city=${inputLocalidad.value}&zip=${inputPostal.value}&email=${inputEmail.value}&password=${inputPassword.value}`
+      `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${inputName.value}&lastName=${inputLastName.value}&dni=${inputDni.value}&dob=${newFormat}&phone=${inputTelephone.value}&address=${inputAddress.value}&city=${inputLocalidad.value}&zip=${inputPostal.value}&email=${inputEmail.value}&password=${inputPassword.value}`
     )
       .then((response) => response.json())
-      .then((data) =>
-        alert(
-          'Name: ' +
-            inputName.value +
-            '\n' +
-            'Last Name: ' +
-            inputLastName.value +
-            '\n' +
-            'Dni : ' +
-            inputDni.value +
-            '\n' +
-            'Date : ' +
-            inputDate.value +
-            '\n' +
-            'Telephone: ' +
-            inputTelephone.value +
-            '\n' +
-            'Address: ' +
-            inputAddress.value +
-            '\n' +
-            'Locality : ' +
-            inputLocalidad.value +
-            '\n' +
-            'Postal : ' +
-            inputPostal.value +
-            '\n' +
-            'Email : ' +
-            inputEmail.value +
-            '\n' +
-            'Password : ' +
-            inputPassword.value +
-            '\n' +
-            'Repeated Password : ' +
-            inputPassword2.value +
-            '\n' +
-            data
-        )
-      )
+      .then((data) => {
+        if (data.success) {
+          alert(
+            'Name: ' +
+              inputName.value +
+              '\n' +
+              'Last Name: ' +
+              inputLastName.value +
+              '\n' +
+              'Dni : ' +
+              inputDni.value +
+              '\n' +
+              'Date : ' +
+              inputDate.value +
+              '\n' +
+              'Telephone: ' +
+              inputTelephone.value +
+              '\n' +
+              'Address: ' +
+              inputAddress.value +
+              '\n' +
+              'Locality : ' +
+              inputLocalidad.value +
+              '\n' +
+              'Postal : ' +
+              inputPostal.value +
+              '\n' +
+              'Email : ' +
+              inputEmail.value +
+              '\n' +
+              'Password : ' +
+              inputPassword.value +
+              '\n' +
+              'Repeated Password : ' +
+              inputPassword2.value +
+              '\n' +
+              data.succes +
+              data.msg
+          );
+          saveDataLocal();
+        }
+      })
       .catch((error) => {
         alert(error);
       });
   } else alert(errArr);
 });
+
+let asd = '2001-02-22';
+function asd1(asd) {
+  return asd.split('').reverse().join('');
+}
+console.log(asd1('2001-02-22'));
