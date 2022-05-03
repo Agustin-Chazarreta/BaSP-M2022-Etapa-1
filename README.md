@@ -38,6 +38,15 @@
 
 #### Url work : https://github.com/Agustin-Chazarreta/BaSP-M2022-Etapa-1/tree/main/Semana-06
 
+# Week 7
+
+- Create new foulders for the problematic. Equal foulders of the week 06.
+- Create fetch for bring information and send information to the server.
+- Manipulate response and data obtained.
+- Create data on the local storage start to interact with it.
+
+#### Url work : https://github.com/Agustin-Chazarreta/BaSP-M2022-Etapa-1/tree/main/Semana-07
+
 ## Contact info
 
 Email: alchazarreta0@gmail.com

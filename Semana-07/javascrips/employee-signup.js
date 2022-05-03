@@ -384,7 +384,7 @@ function checkAll(e) {
               '\n' +
               data.msg
           );
-        }
+        } else return alert(data.msg);
       })
       .catch((error) => {
         alert(error);
