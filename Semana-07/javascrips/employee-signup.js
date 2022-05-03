@@ -201,6 +201,7 @@ function validateDate(e) {
       formatDate.slice(2) +
       '/' +
       formatDate.slice(0, 1);
+
     values[4].boolean = true;
     outputEditOk('output-date', 'valid Date');
   } else {
@@ -311,33 +312,25 @@ function corroboratePass(e) {
   }
 }
 
-//Events
-inputName.addEventListener('blur', validateName);
-inputName.addEventListener('focus', eliminateFocus);
-inputLastName.addEventListener('blur', validateLastName);
-inputLastName.addEventListener('focus', eliminateFocus);
-inputDni.addEventListener('blur', validateDni);
-inputDni.addEventListener('focus', eliminateFocus);
-inputTelephone.addEventListener('blur', validateTelephone);
-inputTelephone.addEventListener('focus', eliminateFocus);
-inputDate.addEventListener('blur', validateDate);
-inputDate.addEventListener('focus', eliminateFocus);
-inputAddress.addEventListener('blur', validateAddress);
-inputAddress.addEventListener('focus', eliminateFocus);
-inputLocalidad.addEventListener('blur', validateLocality);
-inputLocalidad.addEventListener('focus', eliminateFocus);
-inputPostal.addEventListener('blur', validatePostal);
-inputPostal.addEventListener('focus', eliminateFocus);
-inputEmail.addEventListener('blur', checkEmail);
-inputEmail.addEventListener('focus', eliminateFocus);
-inputPassword.addEventListener('blur', validatePass);
-inputPassword.addEventListener('focus', eliminateFocus);
-inputPassword2.addEventListener('blur', corroboratePass);
-inputPassword2.addEventListener('focus', eliminateFocus);
+//Function for set the values
+function setLocalValues() {
+  if (localStorage.length > 0) {
+    inputName.value = localStorage.name;
+    inputLastName.value = localStorage.lastName;
+    inputDni.value = localStorage.dni;
+    inputTelephone.value = localStorage.phone;
+    inputDate.value = localStorage.dob;
+    inputAddress.value = localStorage.address;
+    inputLocalidad.value = localStorage.city;
+    inputPostal.value = localStorage.zip;
+    inputEmail.value = localStorage.email;
+    inputPassword.value = localStorage.password;
+  } else return null;
+}
 
-//Button event
-btn.addEventListener('click', function checkAll(e) {
-  e.preventDefault();
+//Function for submit button
+function checkAll(e) {
+  e.preventDefault(e);
   let arr = [];
   let errArr = [];
   for (let i = 0; i < values.length; i++) {
@@ -348,13 +341,13 @@ btn.addEventListener('click', function checkAll(e) {
     }
   }
   if (arr.length === 11) {
-    //https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birth.value}&phone=${tel.value}&address=${adress.value}&city=${city.value}&zip=${postalCode.value}&email=${email.value}&password=${password.value})
     fetch(
       `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${inputName.value}&lastName=${inputLastName.value}&dni=${inputDni.value}&dob=${newFormat}&phone=${inputTelephone.value}&address=${inputAddress.value}&city=${inputLocalidad.value}&zip=${inputPostal.value}&email=${inputEmail.value}&password=${inputPassword.value}`
     )
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
+          saveDataLocal();
           alert(
             'Name: ' +
               inputName.value +
@@ -389,20 +382,38 @@ btn.addEventListener('click', function checkAll(e) {
               'Repeated Password : ' +
               inputPassword2.value +
               '\n' +
-              data.succes +
               data.msg
           );
-          saveDataLocal();
         }
       })
       .catch((error) => {
         alert(error);
       });
   } else alert(errArr);
-});
-
-let asd = '2001-02-22';
-function asd1(asd) {
-  return asd.split('').reverse().join('');
 }
-console.log(asd1('2001-02-22'));
+//Events
+window.onload = setLocalValues;
+inputName.addEventListener('blur', validateName);
+inputName.addEventListener('focus', eliminateFocus);
+inputLastName.addEventListener('blur', validateLastName);
+inputLastName.addEventListener('focus', eliminateFocus);
+inputDni.addEventListener('blur', validateDni);
+inputDni.addEventListener('focus', eliminateFocus);
+inputTelephone.addEventListener('blur', validateTelephone);
+inputTelephone.addEventListener('focus', eliminateFocus);
+inputDate.addEventListener('blur', validateDate);
+inputDate.addEventListener('focus', eliminateFocus);
+inputAddress.addEventListener('blur', validateAddress);
+inputAddress.addEventListener('focus', eliminateFocus);
+inputLocalidad.addEventListener('blur', validateLocality);
+inputLocalidad.addEventListener('focus', eliminateFocus);
+inputPostal.addEventListener('blur', validatePostal);
+inputPostal.addEventListener('focus', eliminateFocus);
+inputEmail.addEventListener('blur', checkEmail);
+inputEmail.addEventListener('focus', eliminateFocus);
+inputPassword.addEventListener('blur', validatePass);
+inputPassword.addEventListener('focus', eliminateFocus);
+inputPassword2.addEventListener('blur', corroboratePass);
+inputPassword2.addEventListener('focus', eliminateFocus);
+//Button event
+btn.addEventListener('click', checkAll);
